@@ -36,6 +36,8 @@ Se hace configuración de Babel para transpilar el código de la app y generar e
 
 # Endpoints del servicio
 
+[URL API Prueba](https://api-compra-tuya.herokuapp.com/)
+
 Las rutas que se crearon para este servicio son:
 
 - GET(/)
