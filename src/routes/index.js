@@ -64,7 +64,7 @@ router.post('/addProduct', async (req, res) => {
 router.post('/addSellOrder', async (req, res) => {
   let response = {}
   const body = req.body
-
+  
   try {
     if (!body.lineItems) {
       throw Boom.notFound('Line Items not found or invalid')
@@ -78,8 +78,6 @@ router.post('/addSellOrder', async (req, res) => {
 
     body.orderNumber = `TUYA${moment().unix()}${Math.floor(Math.random() * 100)}`
 
-    console.log(body)
-
     const newOrder = new sellOrder(body)
     let order = await newOrder.save()
     
@@ -88,6 +86,7 @@ router.post('/addSellOrder', async (req, res) => {
       statusCode: 201
     }
   } catch (e) {
+    console.log(e)
     response = e.output ? e.output.payload : { error: e, statusCode: 500 }
   }
 

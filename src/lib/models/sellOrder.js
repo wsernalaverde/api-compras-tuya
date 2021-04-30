@@ -12,8 +12,7 @@ const SellOrderSchema = new Schema({
   },
   buyerEmail: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   },
   shippingAddress: {
     type: String,
@@ -36,10 +35,6 @@ const SellOrderSchema = new Schema({
     required: true,
     default: {}
   },
-  shippingMethod: {
-    type: Object,
-    required: true
-  },
   creationDate: {
     type: String,
     required: true
@@ -47,6 +42,10 @@ const SellOrderSchema = new Schema({
   orderNumber: {
     type: String,
     required: true
+  },
+  payMethod: {
+    type: Object,
+    require: true
   }
 })
 
