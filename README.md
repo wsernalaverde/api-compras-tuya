@@ -44,11 +44,12 @@ Las rutas que se crearon para este servicio son:
     
     Respuesta:
 
-    ``{
+    ```json
+    {
         "ok": 1,
         "app": "Compras Tuya",
         "date": "2021-04-30, 5:52:04 pm"
-    } ``
+    } ```
 
 - GET(/getProducts)
 
@@ -56,19 +57,20 @@ Las rutas que se crearon para este servicio son:
 
     Respuesta:
 
-    ``{
+    ```json
+    {
     "data": [
         {
-            "_id": id del prodcuto,
-            "name": nombre del prodcuto,
-            "image": url de la imagen del producto,
-            "price": precio del prodcuto,
-            "code": código del prodcuto,
+            "_id": "id del prodcuto",
+            "name": "nombre del prodcuto",
+            "image": "url de la imagen del producto",
+            "price": "precio del prodcuto",
+            "code": "código del prodcuto",
             "__v": 0
         }
     ],
     "statusCode": 200
-}``
+}```
 
 - POST(/addProduct)
 
@@ -76,59 +78,62 @@ Las rutas que se crearon para este servicio son:
 
     Body:
 
-    ``{
-    "name": Nombre del producto,
-    "image": url de la imagen del producto,
-    "price": precio del prodcuto,
-    "code": Código del producto
-}``
+    ```json
+    {
+    "name": "Nombre del producto",
+    "image": "url de la imagen del producto",
+    "price": "precio del prodcuto",
+    "code": "Código del producto"
+}```
 
 - GET(/getOrders)
 
     Esta ruta lista todas las ordenes de compra almacenadas en la colección SellOrder
 
-    ``{
+    ```json
+    {
     "data": [{
-            "lineItems": Array con la lista de productos,
-            "_id": id de la orden de compra,
-            "buyerName": Nombre del cliente,
-            "buyerPhone": Teléfono del cliente,
-            "buyerEmail": Email del cliente,
-            "shippingAddress": Dirección de envío,
-            "shippingCity": ciudad de envío,
-            "shippingRegion": región de envío,
-            "shippingCountry": país de envío,
-            "payMethod": Objeto con los datos del metodo de pago,
-            "creationDate": fecha de creación de orden de compra,
-            "orderNumber": Número de la orden
+            "lineItems": "Array con la lista de producto"s,
+            "_id": "id de la orden de compra",
+            "buyerName": "Nombre del cliente",
+            "buyerPhone": "Teléfono del cliente",
+            "buyerEmail": "Email del cliente",
+            "shippingAddress": "Dirección de envío",
+            "shippingCity": "ciudad de envío",
+            "shippingRegion": "región de envío",
+            "shippingCountry": "país de envío",
+            "payMethod": "Objeto con los datos del metodo de pago",
+            "creationDate": "fecha de creación de orden de compra",
+            "orderNumber": "Número de la orden"
         }
     ],
     "statusCode": 200
-}``
+}```
 
 - GET(/getOrderDetails/:orderId)
 
 Esta ruta trae por id los datos de una orden especifica que se le pasa en el parametro.
 
-``{
+```json
+{
     "data": [
         {
-            "lineItems": Array con la lista de productos,
-            "_id": id de la orden de compra,
-            "buyerName": Nombre del cliente,
-            "buyerPhone": Teléfono del cliente,
-            "buyerEmail": Email del cliente,
-            "shippingAddress": Dirección de envío,
-            "shippingCity": ciudad de envío,
-            "shippingRegion": región de envío,
-            "shippingCountry": país de envío,
-            "payMethod": Objeto con los datos del metodo de pago,
-            "creationDate": fecha de creación de orden de compra,
-            "orderNumber": Número de la orden
+            "lineItems": "Array con la lista de productos",
+            "_id": "id de la orden de compra",
+            "buyerName": "Nombre del cliente",
+            "buyerPhone": "Teléfono del cliente",
+            "buyerEmail": "Email del cliente",
+            "shippingAddress": "Dirección de envío",
+            "shippingCity": "ciudad de envío",
+            "shippingRegion": "región de envío",
+            "shippingCountry": "país de envío",
+            "payMethod": "Objeto con los datos del metodo de pago",
+            "creationDate": "fecha de creación de orden de compra",
+            "orderNumber": "Número de la orden"
         }
     ],
     "statusCode": 201
-}``
+}```
 
 - POST(/addSellOrder)
 
@@ -136,15 +141,16 @@ Esta ruta sirve para almacenar una orden de compra en la colección SellOrder
 
 Body:
 
-``{
-            "lineItems": Array con la lista de productos,
-            "buyerName": Nombre del cliente,
-            "buyerPhone": Teléfono del cliente,
-            "buyerEmail": Email del cliente,
-            "shippingAddress": Dirección de envío,
-            "shippingCity": ciudad de envío,
-            "shippingRegion": región de envío,
-            "shippingCountry": país de envío,
-            "payMethod": Objeto con los datos del metodo de pago,
-        }``
+```json
+{
+            "lineItems": "Array con la lista de productos",
+            "buyerName": "Nombre del cliente",
+            "buyerPhone": "Teléfono del cliente",
+            "buyerEmail": "Email del cliente",
+            "shippingAddress": "Dirección de envío",
+            "shippingCity": "ciudad de envío",
+            "shippingRegion": "región de envío",
+            "shippingCountry": "país de envío",
+            "payMethod": "Objeto con los datos del metodo de pago",
+        }```
 

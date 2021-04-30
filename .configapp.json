@@ -1,5 +1,5 @@
 {
   "db": {
-    "url": ""
+    "url": "mongodb+srv://user-exercises:ivBoOMVp9a9z@cluster0.imbkw.mongodb.net/api-compras-tuya?retryWrites=true&w=majority"
   }
 }
