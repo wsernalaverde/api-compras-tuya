@@ -49,7 +49,8 @@ Las rutas que se crearon para este servicio son:
         "ok": 1,
         "app": "Compras Tuya",
         "date": "2021-04-30, 5:52:04 pm"
-    } ```
+    }
+    ```
 
 - GET(/getProducts)
 
@@ -70,7 +71,8 @@ Las rutas que se crearon para este servicio son:
         }
     ],
     "statusCode": 200
-}```
+}
+```
 
 - POST(/addProduct)
 
@@ -80,15 +82,18 @@ Las rutas que se crearon para este servicio son:
 
     ```json
     {
-    "name": "Nombre del producto",
-    "image": "url de la imagen del producto",
-    "price": "precio del prodcuto",
-    "code": "Código del producto"
-}```
+        "name": "Nombre del producto",
+        "image": "url de la imagen del producto",
+        "price": "precio del prodcuto",
+        "code": "Código del producto"
+    }
+```
 
 - GET(/getOrders)
 
-    Esta ruta lista todas las ordenes de compra almacenadas en la colección SellOrder
+    Esta ruta lista todas las ordenes de compra almacenadas en la colección SellOrder.
+
+    Respuesta:
 
     ```json
     {
@@ -108,49 +113,54 @@ Las rutas que se crearon para este servicio son:
         }
     ],
     "statusCode": 200
-}```
+    }
+    ```
 
 - GET(/getOrderDetails/:orderId)
 
-Esta ruta trae por id los datos de una orden especifica que se le pasa en el parametro.
+    Esta ruta trae por id los datos de una orden especifica que se le pasa en el parametro.
 
-```json
-{
-    "data": [
-        {
-            "lineItems": "Array con la lista de productos",
-            "_id": "id de la orden de compra",
-            "buyerName": "Nombre del cliente",
-            "buyerPhone": "Teléfono del cliente",
-            "buyerEmail": "Email del cliente",
-            "shippingAddress": "Dirección de envío",
-            "shippingCity": "ciudad de envío",
-            "shippingRegion": "región de envío",
-            "shippingCountry": "país de envío",
-            "payMethod": "Objeto con los datos del metodo de pago",
-            "creationDate": "fecha de creación de orden de compra",
-            "orderNumber": "Número de la orden"
-        }
-    ],
-    "statusCode": 201
-}```
+    Respuesta:
+
+    ```json
+    {
+        "data": [
+            {
+                "lineItems": "Array con la lista de productos",
+                "_id": "id de la orden de compra",
+                "buyerName": "Nombre del cliente",
+                "buyerPhone": "Teléfono del cliente",
+                "buyerEmail": "Email del cliente",
+                "shippingAddress": "Dirección de envío",
+                "shippingCity": "ciudad de envío",
+                "shippingRegion": "región de envío",
+                "shippingCountry": "país de envío",
+                "payMethod": "Objeto con los datos del metodo de pago",
+                "creationDate": "fecha de creación de orden de compra",
+                "orderNumber": "Número de la orden"
+            }
+        ],
+        "statusCode": 201
+    }
+    ```
 
 - POST(/addSellOrder)
 
-Esta ruta sirve para almacenar una orden de compra en la colección SellOrder
+    Esta ruta sirve para almacenar una orden de compra en la colección SellOrder
 
-Body:
+    Body:
 
-```json
-{
-            "lineItems": "Array con la lista de productos",
-            "buyerName": "Nombre del cliente",
-            "buyerPhone": "Teléfono del cliente",
-            "buyerEmail": "Email del cliente",
-            "shippingAddress": "Dirección de envío",
-            "shippingCity": "ciudad de envío",
-            "shippingRegion": "región de envío",
-            "shippingCountry": "país de envío",
-            "payMethod": "Objeto con los datos del metodo de pago",
-        }```
+    ```json
+    {   
+        "lineItems": "Array con la lista de productos",
+        "buyerName": "Nombre del cliente",
+        "buyerPhone": "Teléfono del cliente",
+        "buyerEmail": "Email del cliente",
+        "shippingAddress": "Dirección de envío",
+        "shippingCity": "ciudad de envío",
+        "shippingRegion": "región de envío",
+        "shippingCountry": "país de envío",
+        "payMethod": "Objeto con los datos del metodo de pago",
+    }
+    ```
 
